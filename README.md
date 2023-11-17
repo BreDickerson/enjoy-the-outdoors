@@ -1,5 +1,5 @@
 # enjoy-the-outdoors
-Enjoy the outdoors
+Enjoy the Outdoors project is a National Parks webpage that was used to showcase my knowlegde of Javascript. I implemented the data provided to me inside of the project repository using innerHTML, and to design my project i used HTML and CSS to make it look more stylized. 
 ![index page with jumbotron header and info cards] <img src="screenshots/index-cards-screenshot.png"> 
 <img src="screenshots/index-top-screenshot.png">
 ![ mountains jumbotron and mountain card with image stretch] <img src="screenshots/mountains-top-screenshot.png"> 
