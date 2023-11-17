@@ -9,20 +9,13 @@ window.onload = function (_event) {
   const parkTypecategory = document.getElementById("parktype")
   parkTypecategory.onchange = renderParkscard
 
-  const allParkscategory = document.getElementById("allparks")
-  allParkscategory.onchange = renderParkscard
 
-  
-
-
-
-  populateParktypecategory(parkTypesArray, parkTypecategory)
-  populateLocationcategory(locationsArray, locationCategory)
-  populateallParkscategory(nationalParksArray)
-
+  populateParkTypeSelect(parkTypesArray, parkTypecategory)
+  populateLocationSelect(locationsArray, locationCategory)
+  displayAllParkCards(nationalParksArray)
 }
 
-function populateParktypecategory(parkTypesArray, selectParktype) {
+function populateParkTypeSelect(parkTypesArray, selectParktype) {
   let html = `<option>Pick Park by Parktype</option>`
   for (let parktypeIndex = 0; parktypeIndex < parkTypesArray.length; parktypeIndex += 1) {
     const Parktype = parkTypesArray[parktypeIndex]
@@ -32,7 +25,7 @@ function populateParktypecategory(parkTypesArray, selectParktype) {
   selectParktype.innerHTML = html
 }
 
-function populateLocationcategory(locationsArray, selectLocation) {
+function populateLocationSelect(locationsArray, selectLocation) {
   let html = `<option>Pick park by location</option>  `
   for (let locationIndex = 0; locationIndex < locationsArray.length; locationIndex += 1) {
     const locations = locationsArray[locationIndex];
@@ -41,7 +34,7 @@ function populateLocationcategory(locationsArray, selectLocation) {
   selectLocation.innerHTML = html
 }
 
-function populateallParkscategory(nationalParksArray) {
+function displayAllParkCards(nationalParksArray) {
   let html = ``
   for (let parkIndex = 0; parkIndex < nationalParksArray.length; parkIndex += 1) {
     const park = nationalParksArray[parkIndex];
@@ -57,7 +50,7 @@ function populateallParkscategory(nationalParksArray) {
       <p class="card-text">${park.Phone}</p>
       <p class="card-text">${park.Fax}</p>
       <p class="card-text">Latitude:${park.Latitude} , Longitude: ${park.Longitude}</p>
-      
+      <a href="${park.Visit}">${park.Visit}</a>
     </div>
   </div>`
   }
@@ -85,7 +78,7 @@ function renderParkscard(event) {
               <p class="card-text">${park.Phone}</p>
               <p class="card-text">${park.Fax}</p>
               <p class="card-text">Latitude:${park.Latitude} , Longitude: ${park.Longitude}</p>
-              
+              <a href="${park.Visit}">${park.Visit}</a>
             </div>
           </div>`
     } if (park.LocationName.includes(selectedOption) === true) {
@@ -101,7 +94,7 @@ function renderParkscard(event) {
               <p class="card-text">${park.Phone}</p>
               <p class="card-text">${park.Fax}</p>
               <p class="card-text">Latitude:${park.Latitude} , Longitude: ${park.Longitude}</p>
-              
+              <a href="${park.Visit}">${park.Visit}</a>
             </div>
           </div>`
 

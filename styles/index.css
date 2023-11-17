@@ -1,3 +1,16 @@
 main {
     text-align: center;
 }
+
+#card-list {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+#goatheader {
+    background-image: url('https://cdn.pixabay.com/photo/2020/04/22/14/20/sheep-5078377_640.jpg');
+    background-size:100%;     
+    background-repeat: no-repeat; 
+    height: 100vh;
+    
+
+}
