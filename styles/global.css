@@ -1,0 +1,13 @@
+html {
+    box-sizing: border-box;
+    --bg-color: #6610f2;
+
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+.navbar-nav .navbar-link.active{
+    
+}
